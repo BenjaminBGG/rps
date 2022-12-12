@@ -1,54 +1,7 @@
-/* https://meyerweb.com/eric/tools/css/reset/ */
-@import "meyer-reset.css";
-
-/* SETTINGS */
-
-html {
-    --background-color: #1f2937;
-    --button-color: #3882f6;
-    --black: #333;
-    --white: #efefef;
-    --light: #e5e7eb;
-}
-
-
-
-/* SETUP */
-* { /* https://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
-    box-sizing: border-box;
-}
-
-picture {
-    display: block;
-}
-
-img {
-    display: block;
-    width: 100%;
-    height: auto;
-}
-
-a {
-    display: block;
-    color: inherit;
-    text-decoration: none;
-}
-
-p a, li a {
-    display: inline-block;
-    color: blue;
-    text-decoration: underline;
-}
-
-
-
-
 /* DEV STYLES */
-
 /*
-
 body * {
-    border: 1px solid blud;
+    border: 1px solid blue;
     padding: 2px;
 }
 
@@ -66,9 +19,61 @@ header, footer, main {
 section {
     border: 4px solid lime;
 }
+ 
+score-box {
+    border: 4px solid pink;
+}
+ */
 
-*/
 
+/* https://meyerweb.com/eric/tools/css/reset/ */
+@import "meyer-reset.css";
+
+/* SETTINGS */
+
+html {
+    --header-footer: #343F3E;
+    --background-color: #505A5B;
+    --button-color: #5CAB7D;
+    --black: #333;
+    --white: #efefef;
+    --light: #DCEDFF;
+    --mid-tone: #5CAB7D;
+    --neutral: #343F3E;
+}
+
+
+
+/* SETUP */
+* { /* https://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
+    box-sizing: border-box;
+}
+
+picture {
+    display: block;
+}
+
+img {
+    display: block;
+    width: 50%;
+    height: auto;
+}
+
+a {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+}
+
+p a, li a {
+    display: inline-block;
+    color: blue;
+    text-decoration: underline;
+}
+
+ul {
+    list-style: none;
+}
 
 /* STRUCTURE */
 /* https://philipwalton.github.io/solved-by-flexbox/demos/sticky-footer/ */
@@ -77,7 +82,218 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    width: auto;
 }
 main {
     flex-grow: 1;
+}
+
+inner-column {
+    display: block;
+    padding: 10px;
+    /**/
+    width: 98%;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    background-color: var(--background-color);
+}
+
+header inner-column, footer inner-column {
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: var(--header-footer);
+}
+
+header, footer {
+    background-color: var(--header-footer);
+    color: var(--light);
+}
+
+header inner-column a {
+    justify-content: center;
+}
+
+footer inner-column{    
+    justify-content: center;
+}
+
+/* TYPOGRAPHY */
+.header-voice {
+    font-family: sans-serif;
+    font-size: 24px;
+    text-align: center;
+    color: var(--light)
+}
+
+.loud-voice {
+    font-family: sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.0;
+    background-color: var(--background-color);
+    color: var(--light);
+}
+
+@media (min-width: 700px) {
+    .loud-voice {
+        font-family: sans-serif;
+        font-size: 36px;
+    }
+}
+
+.mix-voice, p {
+    font-family: sans-serif;
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 1.1;
+}
+
+.calm-voice {
+    font-family: sans-serif;
+    font-size: 1rem;
+    line-height: 1.1;
+}
+
+cite {
+    font-family: sans-serif;
+    font-size: 1rem;
+    font-weight: 300;
+    color: var(--light);
+}
+/* COMPONENTS */
+.button {
+    font-family: sans-serif;
+    display: inline-block;
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding: 10px 20px;
+    border-radius: 8px;
+    background-color: var(--button-color);
+    color: var(--black);
+    width: 70%;
+    height: auto;
+}
+
+/* MODULES */
+
+/* HEADER */
+main {
+    background-color: var(--light);
+}
+
+header .header-voice {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+header-links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+
+/* OPTION CONTAINER */
+option-container {
+   display: block;
+}
+
+option-container .options-list {
+    display: flex;
+    justify-content: center;
+}
+
+option-card {
+    display: flex;
+    justify-content: center;
+}
+
+/* REPLAY CONTAINER */
+replay-container {
+    display: flex;
+    justify-content: center;
+ }
+ 
+ replay-container .replay-list {
+     display: flex;
+     justify-content: space-around;
+ }
+ 
+ replay-card {
+    display: flex;
+    justify-content: center;
+ }
+
+/* SCORE */
+
+score-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--neutral);
+    color: var(--header-footer);
+    padding: 40px 80px;
+    border-radius: 8px;
+    font-size: xx-large;
+    font-weight: 900;
+}
+
+score-box .button {
+    background-color: var(--button-color);
+    color: var(--black);
+    border: 2px solid var(--white);
+    align-self: center;
+}
+
+inner-score-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+/* CITATIONS */
+
+citations-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;    
+}
+
+/* CLASSES */
+
+.welcome {
+    background-color: var(--light);
+    color: var(--white);
+}
+
+.player {
+    color: var(--light);
+    padding: 50px;
+}
+
+.robot {
+    color: var(--light);
+    padding: 50px;
+}
+
+.result-box {
+    color: var(--light);
+    padding: 50px;
+    text-align: center;
+}
+
+.replay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

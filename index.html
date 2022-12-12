@@ -1,13 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="./css/style.css">
-	<title>Rock Paper Scissors</title>
-</head>
-<body>
-	<script src="./js/rockPaperScissors.js"></script>>
-
-</body>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="./css/style.css">
+		<title>Rock Paper Scissors</title>
+		<script src="./js/rockPaperScissors.js" defer></script>
+	</head>
+	<body>
+		<header>
+			<inner-column>
+				<h2 class="header-voice">TOP Rock Paper Scissors Revisited</h2>
+				<header-links class="calm-voice">
+					<a href="https://github.com/BenjaminBGG" target="blank" rel="noopener noreferrer">Github</a>
+					<a href="https://www.linkedin.com/in/benjaminbgeorge/" target="blank" rel="noopener noreferrer">LinkedIn</a>
+					<a href="#">Resume</a>
+				</header-links>    
+			</inner-column>
+		</header>
+		<main>
+			<section class="welcome">
+				<inner-column>
+					<text-content>
+						<h1 class="loud-voice" style="text-align:center">Best of 5 Rock-Paper-Scissors</h1>
+					</text-content>
+				</inner-column>
+			</section>
+			<section class="options">
+				<inner-column>
+					<option-container>
+						<ul class="options-list">
+							<li>
+								<option-card>
+									<input type="image" class="button" id="rock" src="./images/rock-paper-scissors-icon-14.jpg"></button>
+								</option-card>
+							</li>
+							<li>
+								<option-card>
+									<input type="image" class="button" id="paper" src="./images/rock-paper-scissors-icon-12.jpg"></button>
+								</option-card>
+							</li>
+							<li>
+								<option-card>
+									<input type="image" class="button" id="scissors" src="./images/rock-paper-scissors-icon-15.jpg"></button>
+								</option-card>
+							</li>
+						</ul>
+					</option-container>
+				</inner-column>
+			</section>
+			<section class="score">
+				<inner-column>
+					<score-box>	
+						<p class="result-box" id="result">Are you ready?</p>
+						<inner-score-box>
+							<p class="player" id="playerScore">Player 0</p>
+							<p class="robot" id="robotScore">Computer 0</p>
+						</inner-score-box>
+					</score-box>
+				</inner-column>
+			</section>
+			<section class ="replay">
+				<inner-column>
+					<replay-container>
+						<replay-card>
+							<button class="button" id="replay">Play Again?</button>
+						</replay-card>
+					</replay-container>
+				</inner-column>
+			</section>
+			<section class="citations">
+				<inner-column>
+					<citations-box>
+						<h1 class="header-voice">Icons sourced from</h1><br>
+						<cite><a href="https://icon-library.com/icon/rock-paper-scissors-icon-14.html.html>" target="blank" rel="noopener noreferrer">Rock Paper Scissors Icon # 21624</a></cite>
+						<cite><a href="https://icon-library.com/icon/rock-paper-scissors-icon-12.html.html" target="blank" rel="noopener noreferrer">Rock Paper Scissors Icon # 21641</a></cite>
+						<cite><a href="https://icon-library.com/icon/rock-paper-scissors-icon-15.html.html" target="blank" rel="noopener noreferrer">Rock Paper Scissors Icon # 21635</a></cite>
+					</citations-box>
+				</inner-column>
+			</section>
+		</main>
+		<footer>
+			<inner-column>
+				<p>Copyright &copy; BG 2022</p>
+			</inner-column>
+		</footer>
+	</body>
 </html>
