@@ -91,7 +91,6 @@ main {
 inner-column {
     display: block;
     padding: 10px;
-    /**/
     width: 98%;
     max-width: 1100px;
     margin-left: auto;
@@ -165,6 +164,7 @@ cite {
     font-weight: 300;
     color: var(--light);
 }
+
 /* COMPONENTS */
 .button {
     font-family: sans-serif;
@@ -178,8 +178,6 @@ cite {
     width: 70%;
     height: auto;
 }
-
-/* MODULES */
 
 /* HEADER */
 main {
@@ -200,7 +198,6 @@ header-links {
     justify-content: flex-end;
     gap: 20px;
 }
-
 
 /* OPTION CONTAINER */
 option-container {
